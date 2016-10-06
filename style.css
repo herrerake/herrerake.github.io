@@ -14,7 +14,7 @@ main{
 
 .firstrow{
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
   border: 5px solid yellow;
   justify-content: space-between;
 
@@ -22,7 +22,7 @@ main{
 
 .secondrow{
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
   border: 5px solid blue;
   justify-content: space-between;
 
@@ -30,17 +30,25 @@ main{
 
 .thirdrow{
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
   border: 5px solid red;
   justify-content: space-between;
 
 }
 
 div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 200px;
   border: 2px solid black;
-  justify-content: center;
+
+}
+
+div div a{
+  flex-direction: row;
+  text-decoration: none;
 
 }
 
