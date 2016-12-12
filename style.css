@@ -1,9 +1,11 @@
 html{
-background-color: #A6CDA7;
-font-family: 'Sanchez', serif;
+  font-family: 'Sanchez', serif;
 }
 
 body{
+  background-image: url("map_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,50 +19,9 @@ main{
   /*border: 5px solid gray;*/
 }
 
-.firstrow{
-  display: flex;
-  /*flex-direction: row;*/
-  /*border: 5px solid yellow;*/
-  justify-content: space-between;
-
-}
-
-.secondrow{
-  display: flex;
-  /*flex-direction: row;*/
-  /*border: 5px solid blue;*/
-  justify-content: space-between;
-
-}
-
-.thirdrow{
-  display: flex;
-  /*flex-direction: row;*/
-  /*border: 5px solid red;*/
-  justify-content: space-between;
-
-}
-
-div div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  /*border: 2px solid black;*/
-
-}
-
-div div a{
-  flex-direction: row;
-  text-decoration: none;
-  color: #152A3F;
-
-}
-
 h1{
   text-align: center;
-  color: #A1A1A1;
+  color: #e8e8e8;
   /*font-family: 'Sanchez', serif;*/
 }
 
@@ -75,7 +36,14 @@ h5{
 }
 
 .about, .contact, .cv, .media, .projects{
-  border: 5px solid #152A3F;
+  border: 2px solid #152A3F;
+  text-align: center;
+  padding-bottom: 1px;
+}
+
+a{
+  text-decoration: none;
+  color: #6b3434;
 }
 
 @media (max-width: 500px) {
