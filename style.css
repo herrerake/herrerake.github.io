@@ -1,71 +1,46 @@
-html{
-  font-family: 'Sanchez', serif;
+
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Lato", sans-serif;
 }
 
-body{
-  background-image: url("map_photo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
 }
 
-main{
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  width: 70%;
-  /*border: 5px solid gray;*/
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h1{
-  text-align: center;
-  color: #e8e8e8;
-  /*font-family: 'Sanchez', serif;*/
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("images/california.jpg");
+    min-height: 100%;
 }
 
-h4{
-  text-align: center;
-  color: #A6CDA7;
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url('images/map_photo.jpg');
+    min-height: 400px;
 }
 
-h5{
-  text-align: center;
-
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("images/ariel_view_highway.jpeg");
+    min-height: 400px;
 }
 
-.about, .contact, .cv, .media, .projects{
-  border: 2px solid #152A3F;
-  text-align: center;
-  padding-bottom: 1px;
-}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
 
-a{
-  text-decoration: none;
-  color: #6b3434;
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
 }
-
-@media (max-width: 500px) {
- h1 {
-   font-size: 50px;
-   margin-top: 20px;
-   line-height: 40px;
- }
- h2 {
-   font-size: 20px;
-   margin: 20px 0 30px 0;
- }
- div {
-   margin: 20px 12px 0 12px;
- }
- p {
-   font-size: 20px;
-   line-height: 24px;
- }
- small {
-   font-size: 16px;
- }
-}
-
-/*hey hello*/
