@@ -19,7 +19,7 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("images/california.jpg");
+    background-image: url("images/california.JPG");
     min-height: 100%;
 }
 
