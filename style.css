@@ -11,7 +11,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,13 +24,19 @@ body, html {
     min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (About Me) */
+.bgimg-4 {
+    background-image: url('images/about-me.jpeg');
+    min-height: 400px;
+}
+
+/* third image (Portfolio) */
 .bgimg-2 {
     background-image: url('images/map_photo.jpg');
     min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* fourth image (Contact) */
 .bgimg-3 {
     background-image: url("images/ariel_view_highway.jpeg");
     min-height: 400px;
