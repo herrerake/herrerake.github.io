@@ -42,6 +42,11 @@ body, html {
     min-height: 400px;
 }
 
+.border{
+  padding:3px;
+  border:1px solid #c8cdd5;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
