@@ -3,11 +3,27 @@ body,h1,h2,h3,h4,h5,h6 {
   font-family: "Lato", sans-serif;
 }
 
+/* about me in 2nd parallax color change to white */
+.aboutme{
+  color: #7291ab;
+}
+
+/* change of web developer and take a scroll font to blue shadow w/ white letters */
+.wd{
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  color: white;
+}
+
 body, html {
     height: 100%;
     color: #fefafa;
     line-height: 1.8;
     background-color: #222;
+}
+
+/* font size of the technologies skills and  */
+.fs{
+  font-size: 18px;
 }
 
 /* Create a Parallax Effect */
@@ -20,13 +36,13 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("images/california.JPG");
+    background-image: url('images/california.JPG');
     min-height: 100%;
 }
 
 /* Second image (About Me) */
 .bgimg-4 {
-    background-image: url('images/about-me.jpeg');
+    background-image: url('images/about_me.jpeg');
     min-height: 400px;
 }
 
@@ -41,7 +57,7 @@ body, html {
     background-image: url("images/ariel_view_highway.jpeg");
     min-height: 400px;
 }
-
+/* the border around all photos */
 .border{
   padding:3px;
   border:1px solid #c8cdd5;
