@@ -2,279 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="w3.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Herrerake's Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous">
+  <title>Kevin Herrera's Portfolio</title>
 </head>
 <body>
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <ul class="w3-navbar" id="myNavbar">
-      <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-        <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-          <i class="fa fa-bars"></i>
-        </a>
-      </li>
-      <li class="w3-left-align navcolor"><a href="#home">HOME</a></li>
-      <li class="w3-hide-small navcolor"><a href="#about"><i class="fa fa-user"></i> ABOUT</a></li>
-      <li class="w3-hide-small navcolor"><a href="#portfolio"><i class="fa fa-th"></i> PORTFOLIO</a></li>
-      <li class="w3-hide-small navcolor"><a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a></li>
-        </li>
-    </ul>
+  <!-- Loading Static TV div-->
+  <div class="loading" id="loadingDiv"></div>
+  <div class="container-fluid" id="contentDiv">
+    <div class="row vh-5"><div class="col-12 bg-black"></div></div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
-      <ul class="w3-navbar w3-left-align w3-white">
-        <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
-        <li><a href="#portfolio" onclick="toggleFunction()">PORTFOLIO</a></li>
-        <li><a href="#contact" onclick="toggleFunction()">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
+    <div class="row vh-85">
 
-  <!-- First Parallax Image with Scroll Animation -->
-  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">Kevin Herrera</span>
-      <span class="scroll-btn">
-        <p class="wd">WEB DEVELOPER</p>
-        <span class="mouse">
-          <span>
-      </span>
-      </span>
-      <p class="wd w3-center">take a scroll</p>
-    </div>
-  </div>
-
-  <!-- Container (About Section) -->
-  <div class="bgimg-4 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-light-grey w3-wide"><p class="aboutme">ABOUT ME</p></span>
-    </div>
-  </div>
-  <div class="w3-content w3-container w3-padding-64 w3-center" id="about">
-    <img src="images/headshot.jpg" class="w3-center border" alt="Photo of Me" width="225" height="337.5">
-    <p>As a bilingual Full Stack Web Developer, my purpose is to collaborate
-      with a diverse community who seeks to pursue excellence, build strategic
-      alliances, and enhance people’s lives through the development of pioneering
-      applications.</p>
-    </div>
-    <p class="w3-large w3-center w3-padding-16">Technologies & Skills:</p>
-      <div class="w3-row-padding w3-center w3-section fs">
-        <div class="w3-col m3">
-          <p>HTML</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>MongoDB</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>Ruby & Ruby on Rails</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>Heroku</p>
-        </div>
+      <div class="col-2 bg-blue" onclick="fadeInLoadingDiv()">
       </div>
 
-      <div class="w3-row-padding w3-center w3-section fs">
-        <div class="w3-col m3">
-          <p>CSS</p>
-        </div>
+      <a href="./about.html" class="col-2 bg-purple hoverBox" id="about"><div onclick="fadeInLoadingDiv()">
+        <p class="hoverBoxText" id="aboutText">ABOUT</p>
+      </div></a>
 
-        <div class="w3-col m3">
-          <p>Express.js</p>
-        </div>
+      <a href="./cv.html" class="col-2 bg-red hoverBox"><div onclick="fadeInLoadingDiv()">
+        <p class="hoverBoxText" id="cv">CV</p>
+      </div></a>
 
-        <div class="w3-col m3">
-          <p>React</p>
-        </div>
+      <a href="./blog.html" class="col-2 bg-orange hoverBox"><div onclick="fadeInLoadingDiv()">
+        <p class="hoverBoxText" id="blog">BLOG</p>
+      </div></a>
 
-        <div class="w3-col m3">
-          <p>Photoshop</p>
-        </div>
+      <a href="./contact.html" class="col-2 bg-yellow hoverBox"><div onclick="fadeInLoadingDiv()">
+        <p class="hoverBoxText" id="contact">CONTACT</p>
+      </div></a>
+
+      <div class="col-2 bg-green" onclick="fadeInLoadingDiv()">
       </div>
 
-      <div class="w3-row-padding w3-center w3-section fs">
-        <div class="w3-col m3">
-          <p>JavaScript</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>AngularJs</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>PostgreSQL</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>Photography</p>
-        </div>
-      </div>
-
-      <div class="w3-row-padding w3-center w3-section fs">
-        <div class="w3-col m3">
-          <p>jQuery/Ajax</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>Node.js</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>Git & GitHub</p>
-        </div>
-
-        <div class="w3-col m3">
-          <p>Native Spanish Speaker</p>
-        </div>
-      </div>
     </div>
 
-    <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-light-grey w3-wide">PORTFOLIO</span>
-      </div>
+    <div class="row vh-5">
+      <div class="col-2 bg-yellow"></div>
+      <div class="col-2 bg-black"></div>
+      <div class="col-2 bg-blue"></div>
+      <div class="col-2 bg-black"></div>
+      <div class="col-2 bg-purple"></div>
+      <div class="col-2 bg-black"></div>
     </div>
 
-    <!-- Container (Portfolio Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="portfolio">
-      <h3 class="w3-center">WEB DEVELOPMENT SAMPLE</h3>
-      <p class="w3-center"><em>Here are some of my most recent projects.<br> Click on the images to make them bigger</em></p><br>
-
-      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-      <div class="w3-row-padding w3-center">
-        <div class="w3-col m3">
-          <img src="./images/tower-of-hanoi.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Tower of Hanoi">
-          <a href="https://herrerake.github.io/Tower-of-Hanoi-Project/">Demo Tower of Hanoi</a>
-          <br>
-          <a href="https://github.com/herrerake/Tower-of-Hanoi-Project">GitHub Repo</a>
-        </div>
-
-        <div class="w3-col m3">
-          <img src="./images/ek3000.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Emoji Keeper 3000">
-          <a href="https://sleepy-reef-35962.herokuapp.com/events">Demo Emoji Keeper 3000</a>
-          <br>
-          <a href="https://github.com/herrerake/you_owe_me">GitHub Repo</a>
-        </div>
-
-        <div class="w3-col m3">
-          <img src="./images/diddy.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Diddy">
-          <a href="https://diddy.herokuapp.com/#/">Demo Diddy</a>
-          <br>
-          <a href="https://github.com/ejsorrento/GA-Project-3-MEAN/tree/MasterDiddy">GitHub Repo</a>
-        </div>
-
-        <div class="w3-col m3">
-          <img src="./images/scribetraveler.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Scribe Traveler">
-          <a href="https://www.scribetraveler.com">Visit Scribe traveler</a>
-        </div>
-      </div>
-
-      <!-- <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-    <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    <div class="row vh-5"><div class="col-12 bg-black"></div></div>
   </div>
+<div id="vignetteHome"></div>
 
-  <div class="w3-col m3">
-  <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-</div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS, then my custom JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./animationjscode.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+  <!-- <script type="text/javascript" src="./script.js"></script> -->
+  <script>
+  //Home page when user hovers over div it displays text within text
+  // $('.hoverBox').mouseover(function(){
+  //   var matchingDiv = $(this).find('p');
 
-<div class="w3-col m3">
-<img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-</div> -->
-</div>
-<br>
-<br>
-<h3 class="w3-center">PHOTOGRAPHY SAMPLE</h3>
-<div class="w3-row-padding w3-center w3-section">
-  <div class="w3-col m3">
-    <img src="./photography/bcf1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Broccoli City Festival">
-  </div>
+  //   if(matchingDiv.length) {
+  //     matchingDiv.css('display', 'block');
+  //     matchingDiv.animateCss('jello');
+  //   }
+  // });
 
-  <div class="w3-col m3">
-    <img src="./photography/bcf2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Big K.r.i.t.">
-  </div>
+  // //Home page when user mouseout over div it displays text within text
+  // $('.hoverBox').mouseout(function(){
+  //   var matchingDiv = $(this).find('p')
 
-  <div class="w3-col m3">
-    <img src="./photography/kdot.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Kendrick Lamar">
-  </div>
+  //   if(matchingDiv.length) {
+  //     matchingDiv.css('display', 'none');
+  //   }
+  // })
+  </script>
 
-  <div class="w3-col m3">
-    <img src="./photography/yeah-yeah-yeahs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Karen O">
-  </div>
-</div>
-<div class="w3-row-padding w3-center w3-section">
-  <div class="w3-col m3">
-    <img src="./photography/cali.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="view of downtown L.A.">
-  </div>
-
-  <div class="w3-col m3">
-    <img src="./photography/lemonade.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Lemonade Stand">
-  </div>
-
-  <div class="w3-col m3">
-    <img src="./photography/lincoln.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Lincoln Memorial">
-  </div>
-
-  <div class="w3-col m3">
-    <img src="./photography/sunset.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity border" alt="Island Sunset">
-  </div>
-</div>
-</div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <div class="w3-row w3-padding-32 w3-section">
-    <!-- <div class="w3-col m4 w3-container"> -->
-    <!-- Add Google Maps -->
-    <!-- <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div> -->
-    <!-- </div> -->
-    <div class="w3-col m8 w3-container w3-section">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Washington D.C.<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Email: 1herrerake@gmail.com<br>
-        <i class="fa fa-twitter fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Twitter: <a href="https://twitter.com/herrerake_"> @herrerake_</a><br>
-        <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>LinkedIn: <a href="https://www.linkedin.com/in/herrerake">www.linkedin.com/in/herrerake</a><br>
-        <i class="fa fa-github fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Github: <a href="https://github.com/herrerake">github.com/herrerake</a><br>
-        <i class="fa fa-file fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><a href="images/Kevin-Herrera-Profile-Resume.pdf">Current Resume</a><br>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <!-- <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
-</footer>
-<script src="script.js"></script>
 </body>
 </html>

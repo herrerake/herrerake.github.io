@@ -1,51 +1,37 @@
-// <!-- Google Map Location -->
-// var myCenter = new google.maps.LatLng(38.907192, -77.036871);
-//
-// function initialize() {
-// var mapProp = {
-//   center: myCenter,
-//   zoom: 12,
-//   scrollwheel: false,
-//   draggable: false,
-//   mapTypeId: google.maps.MapTypeId.ROADMAP
-//   };
-//
-// var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-//
-// var marker = new google.maps.Marker({
-//   position: myCenter,
-// });
-//
-// marker.setMap(map);
-// }
-//
-// google.maps.event.addDomListener(window, 'load', initialize);
+  // delays the a tag from firing so that the loading div can function
+  $(function () {
+      $("a").click(function (evt) {
+          evt.preventDefault();
+          var link = $(this).attr("href");
+          setTimeout(function () {
+              window.location.href = link;
+          }, 1000);
+          fadeInLoadingDiv()
+      });
+  });
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+  //Loading Div
+  function fadeInLoadingDiv() {
+      $('#loadingDiv').fadeIn("slow");
+      $("#contentDiv").css({ // this is just for style
+          "opacity": "0.08",
+          "z-index": "999",
+          "display": "block"
+      });
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-    }
-}
+      setTimeout(function () {
+          /* Loading Div fadeout after page return */
+          $('#loadingDiv').fadeOut("slow");
+          $("#contentDiv").css({ // this is just for style
+              "opacity": "1",
+              "z-index": "0",
+              "display": "none"
+          });
+      }, 1000);
+  }
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
