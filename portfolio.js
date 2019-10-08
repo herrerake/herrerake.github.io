@@ -1,66 +1,72 @@
 //Portfolio Data that we will pass to handlebars
 const portfolioData = {
-    projects: 
-    [
-        {
+    projects: [{
             title: "AVIXA - AVIXA",
             website: "AVIXA",
             websiteURL: "https://www.avixa.org",
+            overviewText: 'none'
         },
         {
             title: "AVEC - AVIXA",
             website: "AV Executive Conference",
-            websiteURL: "https://www.avexecutiveconference.com"
-        }, 
+            websiteURL: "https://www.avexecutiveconference.com",
+            overviewText: "none"
+        },
         {
             title: "TIDE - AVIXA",
             website: "AV Executive Conference",
-            websiteURL: "https://www.tideconference.com"
-        }, 
+            websiteURL: "https://www.tideconference.com",
+            overviewText: "none"
+        },
         {
             title: "Veurinks RV - Level5 Advertising",
             website: "Veurinks RV",
-            websiteURL: "https://www.veurinksrv.com"
-        }, 
+            websiteURL: "https://www.veurinksrv.com",
+            overviewText: 'none'
+        },
         {
             title: "React Tube - Personal Project",
             website: "GitHub Repo",
-            websiteURL: "https://github.com/herrerake/youreacttube"
+            websiteURL: "https://github.com/herrerake/youreacttube",
+            overviewText: "GitHub"
         },
         {
             title: "Crystal Collector Game - Personal Project",
             website: "Heroku Deployment",
             websiteURL: "https://sleepy-depths-82150.herokuapp.com/",
-            overviewLink: "https://github.com/herrerake/week-4-game-CrystalsCollector"
+            overviewLink: "https://github.com/herrerake/week-4-game-CrystalsCollector",
+            overviewText: "GitHub"
         },
         {
             title: "Star Wars Game - Personal Project",
             website: "Heroku Deployment",
             websiteURL: "https://radiant-bayou-23324.herokuapp.com/",
-            overviewLink: "https://github.com/herrerake/star-wars-rpg"
+            overviewLink: "https://github.com/herrerake/star-wars-rpg",
+            overviewText: "GitHub"
         },
         {
             title: "Trivia Game - Personal Project",
             website: "None",
-            overviewLink: "https://github.com/herrerake/advanced-trivia-game"
+            overviewLink: "https://github.com/herrerake/advanced-trivia-game",
+            overviewText: "GitHub"
         }
     ],
     techSkills: ["HTML", "CSS", "JavaScript", "jQuery",
-                 "Bootstrap", "HandleBars", "C#", "ASP.NET",
-                 "AJAX", "Node.js", "Express.js", "React.js",
-                 "WordPress", "Sitefinity", "Git", "GitHub",
-                 "Heroku"
-                ],
+        "Bootstrap", "HandleBars", "C#", "ASP.NET",
+        "AJAX", "Node.js", "Express.js", "React.js",
+        "WordPress", "Sitefinity", "Git", "GitHub",
+        "Heroku", "REST API", "MongoDb", "PostgreSQL",
+    ],
     workExperience: ["AVIXA", "Level 10 Marketing / Level 5",
-                     "George Washington University Coding Bootcamp",
-                     "Orpheus Incorporated", "General Assembly"
-                    ],
+        "George Washington University Coding Bootcamp",
+        "Orpheus Incorporated", "General Assembly"
+    ],
     education: ["General Assembly", "Rich Web Experience 2018", "Virginia Commonwealth University",
-                "University of the West Indies - Cave Hill"
-               ]
+        "University of the West Indies - Cave Hill"
+    ]
 };
 //Portfolio
-(function(){
+(function () {
     let theScriptHTML = document.getElementById('portfolio-template').innerHTML;
     let theTemplate = Handlebars.compile(theScriptHTML);
     let contextObj = portfolioData;
@@ -69,7 +75,7 @@ const portfolioData = {
     document.getElementById('portfolio').innerHTML = compiledData;
 }());
 //Technical Skills
-(function(){
+(function () {
     let theScriptHTML = document.getElementById('resume-template').innerHTML;
     let theTemplate = Handlebars.compile(theScriptHTML);
     let contextObj = portfolioData;
@@ -87,7 +93,7 @@ const portfolioData = {
     document.getElementById('workExperience').innerHTML = compiledData;
 }());
 //Education
-(function (){
+(function () {
     let theScriptHtml = document.getElementById('education-template').innerHTML;
     let theTemplate = Handlebars.compile(theScriptHtml);
     let contextObj = portfolioData;

@@ -1,94 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-  crossorigin="anonymous">
-  <title>Kevin Herrera's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kevin Herrera's Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <!-- Loading Static TV div-->
-  <div class="loading" id="loadingDiv"></div>
-  <div class="container-fluid" id="contentDiv">
-    <div class="row vh-5"><div class="col-12 bg-black"></div></div>
+    <style>
+        .custom-container {
+            padding-left: 72px;
+        }
 
-    <div class="row vh-85">
+        .hero-background {
+            background-image: url(./images/bg_cactus.jpg);
+            height: calc(var(--vh, 1vh)*100);
+            background-size: cover;
+            width:100vw;
+        }
 
-      <div class="col-12 col-md-2 bg-blue" onclick="fadeInLoadingDiv()">
-      </div>
+        #aboutSection {
+            background-image: url(./images/wrench.jpg);
+            height: 100vh;
+            background-size: cover;
+            width:100vw;
+        }
 
-      <a href="./about.html" class="col-md-2 bg-purple hoverBox" id="about"><div onclick="fadeInLoadingDiv()">
-        <p class="hoverBoxText" id="aboutText">ABOUT</p>
-      </div></a>
+       #portfolioSection {
+            background-image: url(./images/brick-wall.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: bottom;
+            width:100vw;
+        }
 
-      <a href="./cv.html" class="col-12 col-md-2 bg-red hoverBox"><div onclick="fadeInLoadingDiv()">
-        <p class="hoverBoxText" id="cv">CV</p>
-      </div></a>
+        #blogSection {
+            background-image: url(./images/pens.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            width:100vw;
+        }
 
-      <a href="./blog.html" class="col-12 col-md-2 bg-orange hoverBox"><div onclick="fadeInLoadingDiv()">
-        <p class="hoverBoxText" id="blog">BLOG</p>
-      </div></a>
+        #contactSection {
+            background-image: url(./images/contact.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            width:100vw;
+        }
 
-      <a href="./contact.html" class="col-12 col-md-2 bg-yellow hoverBox"><div onclick="fadeInLoadingDiv()">
-        <p class="hoverBoxText" id="contact">CONTACT</p>
-      </div></a>
-
-      <div class="col-12 col-md-2 bg-green" onclick="fadeInLoadingDiv()">
-      </div>
-
+        .btn {
+            border: 1px solid #337ab7;
+        }
+    </style>
+    <div id="app">
+        <nav class="nav theme-menu-bar" id="custom-nav">
+            <a href="#menu" class="menu-label">
+                <span class="text">Menu</span>
+                <span class="close">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Times</title>
+                        <g id="1.-Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="M-1-4-Menu-" transform="translate(-176.000000, -624.000000)" fill="currentColor">
+                                <g id="Vertical-Menu-/-Closed" transform="translate(0.000000, 606.000000)">
+                                    <polygon id="Fill-1" points="200 20.2659405 197.734059 18 188.05148 27.6825794 178.26594 18 176 20.2659405 185.682579 30.0514801 176 39.7340595 178.26594 42 188.05148 32.3174207 197.734059 42 200 39.7340595 190.317421 30.0514801">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+            <div class="menu-card">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.myappguide.com">Blog</a>
+                    </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="./index.html#contactSection">Contact</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="theme-socials-list">
+                    <li><a href="https://www.linkedin.com/in/herrerake" target="_blank"
+                            class="linkedin link-default">LinkedIn</a></li>
+                    <li><a href="https://github.com/herrerake" target="_blank"
+                            class="gitHub link-default">GitHub</a></li>
+                    <li><a href="https://www.instagram.com/herrerakee/" target="_blank"
+                            class="instgram link-default">Instgram</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid hero-background custom-container">
+            <div clas="row" style="padding:60px;height:100vh">
+                <div class="col-md-8">
+                    <h1>Kevin Herrera</h1>
+                    <h4>Full Stack Web Developer</h4>
+                    <div class="theme-scroll-intent"><span>Scroll to explore</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container" id="aboutSection">
+            <div clas="row" style="padding:60px;height:100vh">
+                <div class="col-md-8">
+                    <h1>About</h1>
+                    <h4>"Digital Carpenter"</h4>
+                    <p>
+                        Solutions orientated and customer service driven web developer. I work with designers,
+                        content managers, and project owners to bring ideas to life on the web. 
+                    </p>
+                    <a href="./about.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container" id="portfolioSection">
+            <div clas="row" style="padding:60px;height:100vh">
+                <div class="col-md-8">
+                    <h1>Porfolio</h1>
+                    <h4>Always Constructing</h4>
+                    <p>
+                        My greatest strength comes from my innate ability to motivate, uplift, and
+                        promote others. The result are the following projects.
+                    </p>
+                    <a href="./portfolio.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container" id="blogSection">
+            <div clas="row" style="padding:60px;height:100vh">
+                <div class="col-md-6">
+                    <h1>Blog</h1>
+                    <h4>The man behind the digital hardhat</h4>
+                    <p>
+                        At <a href="https://www.myappguide.com" target="_blank">My App Guide</a> you'll find
+                        where I share my applications for life.
+                    </p>
+                    <a hhref="https://www.myappguide.com" target="_blank" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-container" id="contactSection">
+            <div clas="row" style="padding:60px;height:100vh">
+                <div class="col-md-8 offset-md-4">
+                    <h1>Contact</h1>
+                    <h4>Where you can find me</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!--Quotation-->
+                            <p class="contact-list">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn: <a href="https://www.linkedin.com/in/herrerake"
+                                    target="_blank">www.linkedin.com/in/herrerake</a>
+                            </p>
+                            <p class="contact-list">
+                                <i class="fas fa-envelope"></i>
+                                Email: <a href="mailto:1herrerake@gmail.com"
+                                    target="_blank">1herrerake@gmail.com</a>
+                            </p>
+                            <p class="contact-list">
+                                <i class="fab fa-github-square"></i>
+                                GitHub: <a href="https://github.com/herrerake" target="_blank">github.com/herrerake</a>
+                            </p>
+                            <p class="contact-list">
+                                <i class="fab fa-twitter-square"></i>
+                                Instagram: <a href="https://www.instagram.com/herrerakee/" target="_blank">
+                                    @herrerakee</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="row vh-5">
-      <div class="col-2 bg-yellow"></div>
-      <div class="col-2 bg-black"></div>
-      <div class="col-2 bg-blue"></div>
-      <div class="col-2 bg-black"></div>
-      <div class="col-2 bg-purple"></div>
-      <div class="col-2 bg-black"></div>
-    </div>
-
-    <div class="row vh-5"><div class="col-12 bg-black"></div></div>
-  </div>
-<div id="vignetteHome"></div>
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS, then my custom JS -->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./animationjscode.js"></script>
-  <script type="text/javascript" src="./script.js"></script>
-  <!-- <script type="text/javascript" src="./script.js"></script> -->
-  <script>
-  //Home page when user hovers over div it displays text within text
-  // $('.hoverBox').mouseover(function(){
-  //   var matchingDiv = $(this).find('p');
-
-  //   if(matchingDiv.length) {
-  //     matchingDiv.css('display', 'block');
-  //     matchingDiv.animateCss('jello');
-  //   }
-  // });
-
-  // //Home page when user mouseout over div it displays text within text
-  // $('.hoverBox').mouseout(function(){
-  //   var matchingDiv = $(this).find('p')
-
-  //   if(matchingDiv.length) {
-  //     matchingDiv.css('display', 'none');
-  //   }
-  // })
-  </script>
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
