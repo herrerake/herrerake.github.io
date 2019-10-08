@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kevin Herrera's Profile</title>
-    <link rel="stylesheet" href="style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <style>
@@ -55,6 +56,18 @@
 
         .btn {
             border: 1px solid #337ab7;
+        }
+
+        @media screen and (max-width:768px){
+            .hero-background {
+                height: 500px;
+                background-size: cover;
+                width: auto;
+                background-position: center;
+            }
+            .custom-container {
+                padding-left: 0px;
+            }
         }
     </style>
     <div id="app">
@@ -120,7 +133,7 @@
                     <h4>"Digital Carpenter"</h4>
                     <p>
                         Solutions orientated and customer service driven web developer. I work with designers,
-                        content managers, and project owners to bring ideas to life on the web. 
+                        content managers, and project owners to bring ideas to life on the web.
                     </p>
                     <a href="./about.html" class="btn btn-outline-primary">Learn More</a>
                 </div>
