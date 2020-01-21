@@ -1,22 +1,24 @@
 //Portfolio Data that we will pass to handlebars
 const portfolioData = {
-    projects: [{
+    projects: [
+        {
+            title: "Bee1World - Freelance Project",
+            website: "Bee1World",
+            websiteURL: "http://bee1world.org",
+            overviewText: "none"
+        }, 
+        {
+            title: "Emaily - Project",
+            website: "Emaily",
+            websiteURL: "https://cryptic-journey-27105.herokuapp.com",
+            overviewLink: "https://github.com/herrerake/emailyApp",
+            overviewText: "GitHub"
+        },
+        {
             title: "AVIXA - AVIXA",
             website: "AVIXA",
             websiteURL: "https://www.avixa.org",
             overviewText: 'none'
-        },
-        {
-            title: "AVEC - AVIXA",
-            website: "AV Executive Conference",
-            websiteURL: "https://www.avexecutiveconference.com",
-            overviewText: "none"
-        },
-        {
-            title: "TIDE - AVIXA",
-            website: "AV Executive Conference",
-            websiteURL: "https://www.tideconference.com",
-            overviewText: "none"
         },
         {
             title: "Veurinks RV - Level5 Advertising",
@@ -52,19 +54,22 @@ const portfolioData = {
         }
     ],
     techSkills: ["HTML", "CSS", "JavaScript", "jQuery",
-        "Bootstrap", "HandleBars", "C#", "ASP.NET",
-        "AJAX", "Node.js", "Express.js", "React.js",
-        "WordPress", "Sitefinity", "Git", "GitHub",
-        "Heroku", "REST API", "MongoDb", "PostgreSQL",
+        "Bootstrap", "HandleBars", "MVC Frameworks", "C#", "ASP.NET",
+        "AJAX", "Node.js", "Express.js", "React.js", "Redux",
+        "WordPress", "Sitefinity", "Git", "GitHub", "Shopify", "Liquid",
+        "Heroku", "REST API", "MongoDb", "Mongoose", "PostgreSQL", "AWS"
     ],
     workExperience: ["AVIXA", "Level 10 Marketing / Level 5",
         "George Washington University Coding Bootcamp",
         "Orpheus Incorporated", "General Assembly"
     ],
-    education: ["General Assembly", "Rich Web Experience 2018", "Virginia Commonwealth University",
+    education: ["Udemy: Node with React - Fullstack Web Development", "Udemy: The Complete Developers Guide to MongoDb",
+        "General Assembly: Full Stack Web Development", "Rich Web Experience 2018", "Virginia Commonwealth University",
         "University of the West Indies - Cave Hill"
     ]
 };
+
+//HTML5| CSS3| JavaScript ES6| jQuery| REST API| AJAX| Bootstrap| Git & Github| MVC Frameworks| C#| .Net Framework| Git & Github| WordPress| Sitefinity| Shopify | Liquid
 //Portfolio
 (function () {
     let theScriptHTML = document.getElementById('portfolio-template').innerHTML;
