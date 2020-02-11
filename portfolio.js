@@ -2,13 +2,19 @@
 const portfolioData = {
     projects: [
         {
+            title: "Lit City DC - Freelance Project",
+            website: "Litcitydc",
+            websiteURL: "http://litcitydc.com",
+            overviewText: 'none'
+        },
+        {
             title: "Bee1World - Freelance Project",
             website: "Bee1World",
             websiteURL: "http://bee1world.org",
             overviewText: "none"
         }, 
         {
-            title: "Emaily - Project",
+            title: "Emaily - Udemy Project",
             website: "Emaily",
             websiteURL: "https://cryptic-journey-27105.herokuapp.com",
             overviewLink: "https://github.com/herrerake/emailyApp",
@@ -27,7 +33,7 @@ const portfolioData = {
             overviewText: 'none'
         },
         {
-            title: "React Tube - Personal Project",
+            title: "React Tube - Udemy Project",
             website: "GitHub Repo",
             websiteURL: "https://github.com/herrerake/youreacttube",
             overviewText: "GitHub"
@@ -57,11 +63,16 @@ const portfolioData = {
         "Bootstrap", "HandleBars", "MVC Frameworks", "C#", "ASP.NET",
         "AJAX", "Node.js", "Express.js", "React.js", "Redux",
         "WordPress", "Sitefinity", "Git", "GitHub", "Shopify", "Liquid",
-        "Heroku", "REST API", "MongoDb", "Mongoose", "PostgreSQL", "AWS"
+        "Heroku", "REST API", "MongoDb", "Mongoose", "PostgreSQL", "AWS",
+        "Gatsby.js", "GraphQL", "Docker"
     ],
-    workExperience: ["AVIXA", "Level 10 Marketing / Level 5",
-        "George Washington University Coding Bootcamp",
-        "Orpheus Incorporated", "General Assembly"
+    workExperience: [
+        "Accruent, Contract Software Developer (React) - Austin, TX February 2020 – Present",
+        "TrilogyEd Coding Bootcamp GW & UT Campus, Teacher’s Assistant - Arlington VA & Austin, TX Jan 2017 – Feb 2018; Feb 2020 - Present",
+        "AVIXA, Web Developer - Fairfax, VA February 2018 – October 2019",
+        "Tier 10 Marketing / Level 5, Contract WordPress Developer - Herndon, VA November 2017 – February 2018",
+        "Orpheus Incorporated, Wordpress Developer - Herndon, VA January 2017 – October 2017",
+        "General Assembly Full-Time Web Development Immersive - Washington DC October 2016 - December 2016"
     ],
     education: ["Udemy: Node with React - Fullstack Web Development", "Udemy: The Complete Developers Guide to MongoDb",
         "General Assembly: Full Stack Web Development", "Rich Web Experience 2018", "Virginia Commonwealth University",
